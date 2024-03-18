@@ -1,0 +1,8 @@
+<div class="container">
+  <form [formGroup]="deliveryForm" (ngSubmit)="onSetOrder()">
+    <input type="text" formControlName="name">
+    <input type="text" formControlName="adress">
+    <input type="text" formControlName="tel">
+    <button class="btn btn-dark" type="submit">оформить заказ</button>
+  </form>
+</div>

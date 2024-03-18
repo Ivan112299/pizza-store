@@ -1,0 +1,5 @@
+<div class="container" *ngIf="pizzaItems.length">
+  <div *ngFor="let pizzaItem of pizzaItems">
+    <app-pizza-card [name]="pizzaItem.name" [content]="pizzaItem.content"></app-pizza-card>
+  </div>
+</div>
