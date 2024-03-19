@@ -1,54 +1,52 @@
-import { Injectable } from "@angular/core";
-import { PizzaItem } from "../models/pizza-item";
+import { Injectable } from '@angular/core';
+import { PizzaItem } from '../models/pizza-item';
 
 @Injectable()
 export class PizzaService {
-
   public pizzaItems: PizzaItem[] = [
     {
       name: 'Мясная де люкс',
       content: 'Пепперони, лук, бекон, томатная паста, колбаски, перец, грибы,',
-      img: ''
+      img: './../../../../assets/mock-pizza/pizza_1.png',
     },
     {
       name: 'Морская Премиум',
       content: 'Перец, сыр, креветки, кальмары, мидии, лосось',
-      img: ''
+      img: './../../../../assets/mock-pizza/pizza_2.png',
     },
     {
       name: 'Бекон и Сосиски',
       content: 'Бекон, сыр, сосиски, ананас, томатная паста',
-      img: ''
+      img: './../../../../assets/mock-pizza/pizza_3.png',
     },
     {
       name: 'Куриная Делюкс',
       content: 'Курица, ананас, сыр Пепперони, соус для пиццы, томатная паста',
-      img: ''
+      img: './../../../../assets/mock-pizza/pizza_4.png',
     },
     {
       name: 'Барбекю Премиум',
-      content: 'Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чи',
-      img: ''
+      content:
+        'Свинина BBQ, соус Барбкею, сыр, курица, соус для пиццы, соус чи',
+      img: './../../../../assets/mock-pizza/pizza_4.png',
     },
     {
       name: 'Пепперони Дабл',
       content: 'Пепперони, сыр, колбаса 2 видов: обжаренная и вареная',
-      img: ''
+      img: './../../../../assets/mock-pizza/pizza_3.png',
     },
     {
       name: 'Куриное трио',
-      content: 'Жареная курица, Тушеная курица, Куриные наггетсы, перец, сыр, г',
-      img: ''
+      content:
+        'Жареная курица, Тушеная курица, Куриные наггетсы, перец, сыр, г',
+      img: './../../../../assets/mock-pizza/pizza_2.png',
     },
     {
       name: 'Сырная',
       content: 'Сыр Джюгас, Сыр с плесенью, Сыр Моцарелла, Сыр секретный',
-      img: ''
-    }
+      img: './../../../../assets/mock-pizza/pizza_1.png',
+    },
+  ];
 
-  ]
-
-  constructor() {
-
-  }
+  constructor() {}
 }

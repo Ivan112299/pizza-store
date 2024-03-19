@@ -7,6 +7,7 @@ import { CallToActionComponent } from "./components/call-to-action/call-to-actio
 import { PizzaItemsComponent } from "./components/pizza-items/pizza-items.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
+import { AlertComponent } from '../shared/components/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
     AboutComponent,
     PizzaItemsComponent,
     CallToActionComponent,
-    PizzaCardComponent
+    PizzaCardComponent,
+    AlertComponent
   ],
   imports: [
     ReactiveFormsModule,

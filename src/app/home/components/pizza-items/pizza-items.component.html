@@ -1,5 +1,8 @@
-<div class="container" *ngIf="pizzaItems.length">
-  <div *ngFor="let pizzaItem of pizzaItems">
-    <app-pizza-card [name]="pizzaItem.name" [content]="pizzaItem.content"></app-pizza-card>
+<div class="container">
+  <h1>Выберите свою любимую пиццу </h1>
+  <div class="pizza-items" *ngIf="pizzaItems.length">
+    <div *ngFor="let pizzaItem of pizzaItems">
+      <app-pizza-card [name]="pizzaItem.name" [content]="pizzaItem.content" [imgSrc]="pizzaItem.img"></app-pizza-card>
+    </div>
   </div>
 </div>

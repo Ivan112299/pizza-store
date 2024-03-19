@@ -1,19 +1,25 @@
 <nav class="navbar">
-  <h1>
-    <a routerLink="/">Testing</a>
-  </h1>
-  <ul>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/home']">Пиццы</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/drinks']">Напитки</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/delivery']">Доставка и оплата</a>
-    </li>
-    <li routerLinkActive="active">
-      <a [routerLink]="['/contacts']">Контакты</a>
-    </li>
-  </ul>
+  <div class="menu-left">
+    <div class="logo">
+      <img src="./../../../../assets/icons/pizza.png" alt="">
+      <img src="./../../../../assets/icons/Pizza cheff.png" alt="">
+    </div>
+  </div>
+  <div class="menu-right">
+    <ul>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/home']">Пиццы</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/drinks']">Напитки</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/delivery']">Доставка и оплата</a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/contacts']">Контакты</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+<div class="separator"></div>

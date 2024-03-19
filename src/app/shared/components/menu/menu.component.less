@@ -1,0 +1,40 @@
+:host {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  .separator {
+    width: 100vw;
+    top: 100px;
+    position: absolute;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+  }
+
+  .menu-right {
+    display: flex;
+    flex-grow: 1;
+    ul {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+
+      li {
+        padding: 0px 25px;
+        font-size: 16px;
+        font-family: "MullerRegular";
+        a {
+          color: var(--menu-brown);
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,30 @@
 <div class="container">
-  <form [formGroup]="deliveryForm" (ngSubmit)="onSetOrder()">
-    <input type="text" formControlName="name">
-    <input type="text" formControlName="adress">
-    <input type="text" formControlName="tel">
-    <button class="btn btn-dark" type="submit">оформить заказ</button>
-  </form>
+  <div class="text">
+    <h1>Хватит думать!<br /><span>Доставим заказ за 30 минут!</span></h1>
+    <p>
+      Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления
+      заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ
+      бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+      сервисом и сделаем всё, чтобы наш клиент был доволен и не остался
+      голодный!
+    </p>
+  </div>
+  <div class="form">
+    <form [formGroup]="deliveryForm" (ngSubmit)="onSetOrder()">
+      <input type="text" formControlName="name" placeholder="Ваше имя"/>
+      <input type="text" formControlName="adress" placeholder="Адрес доставки"/>
+      <input type="text" formControlName="tel" placeholder="Телефон" />
+      <button class="btn btn-dark" type="submit">Оформить заказ</button>
+    </form>
+  </div>
+  <div class="img">
+    <img src="./../../../../assets/icons/pizza_big_footer.png" alt="">
+  </div>
 </div>
+<app-alert
+  *ngIf="formHasError"
+  [delay]="4000"
+  [type]="'error'"
+  [text]="textAlert"
+  (close)="formHasError = false"
+></app-alert>

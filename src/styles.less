@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --base-orange: #ffaf17;
+  --base-brown: #b99150;
+  --menu-brown: #a46b00;
+  --button-black: #382400;
+  --base-black: #382400;
+}
+
+@font-face {
+  font-family: "MullerBold";
+  src: url("./assets/fonts/MullerBold.woff") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerExtraBold";
+  src: url("./assets/fonts/MullerExtraBold.woff") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MullerRegular";
+  src: url("./assets/fonts/MullerRegular.woff") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "MullerRegular", sans-serif;
+  max-width: 1800;
+  margin-top: 0;
+  display: block;
+  overflow-x: hidden;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:active {
+      text-decoration: none;
+      color: var(--base-brown);
+    }
+  }
+
+  button {
+    margin: 0;
+    font-family: MullerBold;
+    background-color: var(--base-orange);
+    border: none;
+    color: var(--button-black);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+  }
+
+  button:hover {
+    background: var(--base-brown);
+  }
+
+  input {
+    padding: 15px;
+    border: 1px solid var(--base-brown);
+    color: var(--base-brown);
+    margin-bottom: 25px;
+  }
+
+  ::placeholder {
+    color: var(--base-brown);
+    font-size: 18px;
+    font-family: MullerRegular;
+  }
+
+  
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+
+  input.middle:focus {
+    outline-width: 0;
+  }
+}

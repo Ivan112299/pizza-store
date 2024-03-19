@@ -1,0 +1,67 @@
+:host {
+  width: 100%;
+  height: 720px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 140px 0px;
+
+    .info {
+      .title {
+        h1 {
+          font-family: MullerExtraBold;
+          color: var(--base-brown);
+          font-size: 45px;
+        }
+        span {
+          color: var(--base-orange);
+        }
+      }
+
+      .benefits {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .benefits-item {
+          width: 300px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 10px;
+
+          .icon {
+            padding-right: 15px;
+          }
+
+          .text {
+            h3 {
+              text-transform: uppercase;
+              font-family: MullerExtraBold;
+              font-size: 13px;
+              color: var(--base-orange);
+              margin: 0px 0px 5px 0px;
+            }
+
+            p {
+              color: var(--base-brown);
+              margin: 0px;
+            }
+          }
+        }
+      }
+
+      button {
+        margin-top: 60px;
+        padding: 20px 45px;
+      }
+    }
+
+    .pizza-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.alert {
+  position: absolute;
+  border-radius: 10px;
+  width: 400px;
+  margin-left: -200px;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  transform: translate(0px, -10px);
+  transition: 1s;
+  border: 1px solid var(--danger-color);
+  text-align: center;
+  color: #333;
+  animation: animation .5s forwards;
+}
+@keyframes animation {
+  0% {
+    opacity: 0;
+    bottom: -50px;
+  }
+  100% {
+    opacity: 1;
+    bottom: 10px;
+  }
+}

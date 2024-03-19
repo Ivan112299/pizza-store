@@ -8,17 +8,25 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CallToActionComponent {
 
+  formHasError = false
+  textAlert = 'Форма заполнена не корректно'
+
   deliveryForm: FormGroup = this.fb.group({
     name: ['', Validators.required],
     adress: ['', Validators.required],
-    tel: ['', Validators.pattern('[0-9]')]
+    tel: ['', [Validators.required, Validators.pattern('[0-9]')]]
   })
   constructor(private fb: FormBuilder) {
 
   }
 
   onSetOrder() {
-    console.log('Заказ оформлен, запрос в апи', this.deliveryForm.status)
+    console.log('FormData', this.deliveryForm)
+    if (this.deliveryForm.status === 'INVALID') {
+      this.formHasError = true;
+      return
+    };
+    console.log('Запос в апи', this.deliveryForm)
     this.deliveryForm.reset()
   }
 }

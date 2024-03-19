@@ -16,6 +16,7 @@ import { PizzaItemsComponent } from './home/components/pizza-items/pizza-items.c
 import { HomeModule } from './home/home.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { AlertComponent } from './shared/components/alert/alert.component';
 
 @NgModule({
   declarations: [
