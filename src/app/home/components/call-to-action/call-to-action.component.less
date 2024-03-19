@@ -29,9 +29,26 @@
     .form {
       margin: auto 100px;
       flex-basis: 400px;
-      input {
-        width: 330px;
-        box-sizing: border-box;
+
+      .form-item {
+        position: relative;
+
+        input {
+          width: 330px;
+          box-sizing: border-box;
+  
+          &.invalid {
+            border: 1px solid var(--color-error);
+          }
+        }
+
+        .validations {
+          color: var(--color-error);
+          position: absolute;
+          display: block;
+          top: 50px
+        }
+
       }
 
       button {

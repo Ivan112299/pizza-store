@@ -11,9 +11,40 @@
   </div>
   <div class="form">
     <form [formGroup]="deliveryForm" (ngSubmit)="onSetOrder()">
-      <input type="text" formControlName="name" placeholder="Ваше имя"/>
-      <input type="text" formControlName="adress" placeholder="Адрес доставки"/>
-      <input type="text" formControlName="tel" placeholder="Телефон" />
+      <div class="form-item">
+        <input 
+          [ngClass]="{invalid: deliveryForm.controls['name'].touched && deliveryForm.controls['name'].errors?.['required']}" 
+          type="text" 
+          formControlName="name"
+          placeholder="Ваше имя" />
+        <div *ngIf="deliveryForm.controls['name'].touched && deliveryForm.controls['name'].errors?.['required']" class="validations">
+          <small>Заполните поле</small>
+        </div>
+      </div>
+      <div class="form-item">
+        <input
+          [ngClass]="{invalid: deliveryForm.controls['adress'].touched && deliveryForm.controls['adress'].errors?.['required']}" 
+          type="text" 
+          formControlName="adress" 
+          placeholder="Адрес доставки" />
+        <div *ngIf="deliveryForm.controls['adress'].touched && deliveryForm.controls['adress'].errors?.['required']" class="validations">
+          <small>Заполните поле</small>
+        </div>
+      </div>
+      <div class="form-item">
+        <input 
+          [ngClass]="{invalid: deliveryForm.controls['tel'].touched && deliveryForm.controls['tel'].errors?.['required']}" 
+          type="tel" 
+          formControlName="tel" 
+          placeholder="Телефон" max="12"/>
+        <div *ngIf="deliveryForm.controls['tel'].touched && deliveryForm.controls['tel'].errors?.['required']" class="validations">
+          <small>Заполните поле</small>
+        </div>
+        <div *ngIf="deliveryForm.controls['tel'].touched && deliveryForm.controls['tel'].errors?.['pattern']" class="validations">
+          <small>Введите корректный номер телефона</small>
+        </div>
+      </div>
+
       <button class="btn btn-dark" type="submit">Оформить заказ</button>
     </form>
   </div>
@@ -21,10 +52,5 @@
     <img src="./../../../../assets/icons/pizza_big_footer.png" alt="">
   </div>
 </div>
-<app-alert
-  *ngIf="formHasError"
-  [delay]="4000"
-  [type]="'error'"
-  [text]="textAlert"
-  (close)="formHasError = false"
-></app-alert>
+<app-alert *ngIf="formHasError" [delay]="4000" [type]="'error'" [text]="textAlert"
+  (close)="formHasError = false"></app-alert>

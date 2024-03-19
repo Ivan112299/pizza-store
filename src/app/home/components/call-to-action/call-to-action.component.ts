@@ -14,7 +14,7 @@ export class CallToActionComponent {
   deliveryForm: FormGroup = this.fb.group({
     name: ['', Validators.required],
     adress: ['', Validators.required],
-    tel: ['', [Validators.required, Validators.pattern('[0-9]')]]
+    tel: ['', [Validators.required, Validators.pattern('[0-9]{11}')]]
   })
   constructor(private fb: FormBuilder) {
 
@@ -26,6 +26,7 @@ export class CallToActionComponent {
       this.formHasError = true;
       return
     };
+    // this.deliveryForm.controls['name'].touched
     console.log('Запос в апи', this.deliveryForm)
     this.deliveryForm.reset()
   }
