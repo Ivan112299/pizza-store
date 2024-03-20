@@ -1,17 +1,26 @@
 .alert {
   position: absolute;
+  left: 50%;
   border-radius: 10px;
-  width: 400px;
-  margin-left: -200px;
+  width: 300px;
+  margin-left: -150px;
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
   transform: translate(0px, -10px);
   transition: 1s;
-  border: 1px solid var(--danger-color);
+  
   text-align: center;
   color: #333;
   animation: animation .5s forwards;
+
+  &.alert-success {
+    background-color: var(--success-color);
+  }
+
+  &.alert-danger {
+    background-color: var(--danger-color);
+  }
 }
 @keyframes animation {
   0% {

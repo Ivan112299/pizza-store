@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { PizzaItem } from '../models/pizza-item';
+import { OrderInfo, PizzaItem } from '../models/pizza-item';
+import { Observable, from } from 'rxjs';
 
 @Injectable()
 export class PizzaService {
@@ -49,4 +50,12 @@ export class PizzaService {
   ];
 
   constructor() {}
+
+  getPizzaItems(): PizzaItem[] {
+    return this.pizzaItems;
+  }
+
+  sendOrder(orderInfo: OrderInfo): Observable<Response> {
+    return from(fetch('https://jsonplaceholder.typicode.com/todos/1'))
+  }
 }

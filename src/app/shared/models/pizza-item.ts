@@ -3,3 +3,9 @@ export type PizzaItem = {
   content: string,
   img: string
 }
+
+export type OrderInfo = {
+  name: string,
+  adress: string,
+  tel: string
+}

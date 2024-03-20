@@ -15,7 +15,7 @@ export class PizzaItemsComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.pizzaItems = this.pizzaService.pizzaItems
+    this.pizzaItems = this.pizzaService.getPizzaItems()
   }
 
 
