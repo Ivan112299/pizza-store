@@ -13,40 +13,39 @@
     <form [formGroup]="deliveryForm" (ngSubmit)="onSubmit()">
       <div class="form-item">
         <input 
-          [ngClass]="{invalid: _name?.touched && _name?.errors?.['required']}" 
+          [ngClass]="{invalid: deliveryForm.dirty && _name?.errors?.['required']}" 
           (input)="onInputName($event)"
           type="text" 
           formControlName="name"
           placeholder="Ваше имя" />
-        <div *ngIf="_name?.touched && _name?.errors?.['required']" class="validations">
+        <div *ngIf="deliveryForm.dirty && _name?.errors?.['required']" class="validations">
           <small>Заполните поле</small>
         </div>
       </div>
       <div class="form-item">
         <input
-          [ngClass]="{invalid: _adress?.touched && _adress?.errors?.['required']}" 
+          [ngClass]="{invalid: deliveryForm.dirty && _adress?.errors?.['required']}" 
           type="text" 
           formControlName="adress" 
           placeholder="Адрес доставки" />
-        <div *ngIf="_adress?.touched && _adress?.errors?.['required']" class="validations">
+        <div *ngIf="deliveryForm.dirty && _adress?.errors?.['required']" class="validations">
           <small>Заполните поле</small>
         </div>
       </div>
       <div class="form-item">
         <input 
-          [ngClass]="{invalid: _tel?.touched && _tel?.errors?.['required']}" 
+          [ngClass]="{invalid: deliveryForm.dirty && _tel?.errors?.['required']}" 
           type="tel" 
           formControlName="tel" 
           placeholder="Телефон" max="12"/>
-        <div *ngIf="_tel?.touched && _tel?.errors?.['required']" class="validations">
+        <div *ngIf="deliveryForm.dirty  && _tel?.errors?.['required']" class="validations">
           <small>Заполните поле</small>
         </div>
-        <div *ngIf="_tel?.touched && _tel?.errors?.['pattern']" class="validations">
-          <small>Номер должет содержать от 7 до 15 цифр</small>
+        <div *ngIf="deliveryForm.dirty && _tel?.errors?.['pattern']" class="validations">
+          <small>Номер должет содержать от 7 до 15 цифр и начинаться с +7</small>
         </div>
       </div>
-
-      <button class="btn btn-dark" type="submit"  [disabled]="submitted">Оформить заказ</button>
+      <button class="btn btn-dark" type="submit"  [disabled]="submitted ">Оформить заказ</button>
     </form>
   </div>
   <div class="img">

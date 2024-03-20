@@ -33,7 +33,7 @@ import { AlertComponent } from './shared/components/alert/alert.component';
     CommonModule,
     HomeModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

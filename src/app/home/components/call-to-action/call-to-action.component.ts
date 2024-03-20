@@ -57,11 +57,14 @@ export class CallToActionComponent implements OnInit {
       })
   }
 
-
   onSubmit() {
-    if (this.deliveryForm.status === 'INVALID') return;
-
     this.submitted = true;
+    this.deliveryForm.markAsDirty()
+    if (this.deliveryForm.status === 'INVALID') {
+      this.submitted = false;
+      return;
+    };
+    
     this.pizzaService.sendOrder(this.deliveryForm.value as OrderInfo).subscribe({
       next: () => {
         this.submitted = false

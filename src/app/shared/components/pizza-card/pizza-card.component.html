@@ -1,6 +1,11 @@
 <div class="container">
   <div class="img">
-    <img [src]="imgSrc" alt="">
+    <a  
+      class="my-image-links" 
+      data-gall="gallery01" 
+      [href]="imgSrc">
+        <img [src]="imgSrc" alt="">
+    </a> 
   </div>
   <div class="name">
     <span>{{name}}</span>
