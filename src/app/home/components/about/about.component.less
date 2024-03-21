@@ -59,9 +59,35 @@
     }
 
     .pizza-img {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+  }
+}
+
+@media screen and (max-width: 1167px) {
+  .container {
+    padding-top: 0px !important;
+
+    .info {
+      .title {
+        text-align: center;
+      }
+    }
+
+    .benefits {
+      justify-content: center !important;
+    }
+
+    .button {
+      display: inline-block;
+      text-align: center;
+      width: 100% !important;
+    }
+  }
+
+  .pizza-img {
+    display: none !important;
   }
 }

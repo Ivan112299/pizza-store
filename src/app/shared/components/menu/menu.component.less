@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
+
   .separator {
     width: 100vw;
     top: 100px;
@@ -19,7 +19,7 @@
     width: 1200px;
   }
 
-  .menu-left .logo{
+  .menu-left .logo {
     display: flex;
     align-items: center;
     img {
@@ -42,6 +42,26 @@
         a {
           color: var(--menu-brown);
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :host {
+    height: 200px !important;
+  }
+  .navbar {
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+  .menu-right {
+    ul {
+      flex-direction: column !important;
+
+      li {
+        text-align: center;
+        margin-top: 10px;
       }
     }
   }
